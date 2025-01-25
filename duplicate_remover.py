@@ -7,6 +7,14 @@
 # 
 def duplicate_remover():
     duplicates_list = [1, 4, 3, 4, 2, 5, 1, 2, 7, 9, 4]
+    seen = set()
+    result = []
+
+    for number in duplicates_list:
+        if number not in seen:
+            result.append(number)
+            seen.add(number)
+    print(result)
     
     # YOUR CODE GOES HERE
 
