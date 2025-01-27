@@ -30,11 +30,11 @@ def temperature_calculator():
            break
        try:
            temperature = float(user_input)
-           temperature.append (temperature)
+           temperatures.append (temperature)
 
            mean_temp = sum (temperatures) / len(temperatures)
 
-           print(f"The average temperature so far is {mean_temp}")
+           print(f"The average temperature so far is {mean_temp:.1f}")
        except ValueError:
            print("Please enter a valid temperature or 'quit' to exit.")
 

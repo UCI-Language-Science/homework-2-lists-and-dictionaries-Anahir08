@@ -28,24 +28,25 @@
 # Your total grocery bill is $7
 
 def grocery_calculator():
-   prices = {
-       "bread": 3,
-       "eggs": 6,
-       "milk": 4,
-       "butter": 2
-   }
-
-total_cost= 0 
-
-while True:
-    item= input("Input grocery item: ").strip().lower()
-    if item == "":
-        break
-    if item in prices: 
-        total_cost += prices[item]
-    else:
-        print("The store doesn't have that")
-print(f"Your total grocery bill is ${total_cost}")
+   grocery_prices = {
+       'bread': 3,
+       'eggs': 6,
+       'milk': 4,
+       'butter': 2
+    }
+   total_cost = 0 
+   while True:
+        new_item = input("Input grocery item: ")
+        item = new_item.lower()
+        if item != '':
+            item_cost = grocery_prices.get(item,0)
+            if item_cost == 0:
+                print("The store doesn't have that.")
+            else:
+                total_cost += item_cost
+        else:
+            print(f"Your total grocery bill is ${total_cost}")
+            break
 
 if __name__ == "__main__":
     grocery_calculator()
