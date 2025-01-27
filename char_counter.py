@@ -25,9 +25,11 @@
 # code should work for arbitrary strings, including the empty string.
 
 def char_counter():
-    # YOUR CODE GOES HERE
-    # You can delete the line below when you start adding code
-    pass
-
+    input_string= input("Enter a string:")
+    char_count= {}
+    for char in input_string:
+        char_count[char] = char_count.get(char, 0) + 1
+    print(char_count)
+        
 if __name__ == "__main__":
     char_counter()
